@@ -63,7 +63,7 @@ vi docs/docfx.json
 
 ```bash
 // サイトの名称
-Name (mysite): Synesthesias PLATEAU SNAP ドキュメント
+Name (mysite): PLATEAU SNAP ドキュメント
 
 // APIドキュメントを作成するかどうか
 Generate .NET API documentation? [y/n] (y): ※そのままエンターキーを押す
@@ -86,7 +86,7 @@ Is this OK? [y/n] (y): ※そのままエンターキーを押す
 
 ### API ドキュメントに含める csproj を指定
 
-> docs/[docfx.json](https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/docs/docfx.json)
+> docs/[docfx.json](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/docs/docfx.json)
 
 ```diff
 {
@@ -173,8 +173,8 @@ http://localhost:<ポート番号>
 ### PR マージと自動デプロイ
 
 -   ここまでの変更差分を push してプルリクエストを main ブランチへマージします
--   main ブランチに変更が加わると[GitHub Action](https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/.github/workflows/deploy-docs.yml)が自動で `docs/_site` 配下のファイルを [gh-pages](https://github.com/Synesthesias/PLATEAU-SNAP-App/tree/gh-pages) ブランチへ自動で push します
--   自動で[ドキュメント](https://synesthesias.github.io/PLATEAU-SNAP-App)ページにデプロイされ更新されます(詳細後述)
+-   main ブランチに変更が加わると[GitHub Action](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/.github/workflows/deploy-docs.yml)が自動で `docs/_site` 配下のファイルを [gh-pages](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/gh-pages) ブランチへ自動で push します
+-   自動で[ドキュメント](https://project-plateau.github.io/PLATEAU-SNAP-App/index.html)ページにデプロイされ更新されます(詳細後述)
 
 #### 自動デプロイの設定について
 
@@ -190,7 +190,7 @@ http://localhost:<ポート番号>
 
 ## サンプルの API 通信用のクライアントコードの更新方法
 
--   [サーバー側](https://github.com/Synesthesias/PLATEAU-SNAP-Server)の API が更新されたら [spec.json](https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/OpenAPI/spec.json) を更新してください
+-   [サーバー側](https://github.com/Project-PLATEAU/PLATEAU-SNAP-Server)の API が更新されたら [spec.json](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/OpenAPI/spec.json) を更新してください
 -   以下の手順を参考に OpenAPI の Generator で Generated.Client ディレクトリ配下のソースコードを更新します
 
 ```bash
@@ -303,14 +303,14 @@ npx openupm-cli info org.nuget.polly
 
 -   表示されたテンプレートをそのまま使ってください
 -   (または URL の末尾に `?template=feature_template.md` を追記してください)
--   テンプレートを更新する場合は[こちら](https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/.github/pull_request_template.md)のファイルを更新して下さい
+-   テンプレートを更新する場合は[こちら](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/.github/pull_request_template.md)のファイルを更新して下さい
 
 ### 不具合修正のプルリクエストの場合
 
 -   URL の末尾に `?template=fix_template.md` を追記してください
--   テンプレートを更新する場合は[こちら](https://github.com/Synesthesias/PLATEAU-SNAP-App/blob/main/.github/PULL_REQUEST_TEMPLATE/fix_template.md)のファイルを更新して下さい
+-   テンプレートを更新する場合は[こちら](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/blob/main/.github/PULL_REQUEST_TEMPLATE/fix_template.md)のファイルを更新して下さい
 
 ### その他のプルリクエストの場合
 
 -   テンプレートは作成していないです
--   必要に応じて[PULL_REQUEST_TEMPLATE](https://github.com/Synesthesias/PLATEAU-SNAP-App/tree/main/.github/PULL_REQUEST_TEMPLATE)ディレクトリ配下に追加してください
+-   必要に応じて[PULL_REQUEST_TEMPLATE](https://github.com/Project-PLATEAU/PLATEAU-SNAP-App/tree/main/.github/PULL_REQUEST_TEMPLATE)ディレクトリ配下に追加してください
